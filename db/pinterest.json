@@ -1,0 +1,92 @@
+{
+    "pins": {
+        "pin0": {
+            "name": "Example 1",
+            "url": "www.link.com",
+            "img_path": "img.jpg",
+            "details": "Details for Example 1",
+            "boardId": "",
+            "uId": "0"
+        },
+        "pin1": {
+            "name": "Example 2",
+            "url": "www.link.com",
+            "img_path": "img.jpg",
+            "details": "Details for Example 2",
+            "boardId": "1",
+            "uId": "0"
+        },
+        "pin2": {
+            "name": "Example 3",
+            "url": "www.link.com",
+            "img_path": "img.jpg",
+            "details": "Details for Example 3",
+            "boardId": "2",
+            "uId": "1"
+        },
+        "pin3": {
+            "name": "Example 4",
+            "url": "www.link.com",
+            "img_path": "img.jpg",
+            "details": "Details for Example 4",
+            "boardId": "3",
+            "uId": "2"
+        },
+        "pin4": {
+            "name": "Example 4",
+            "url": "www.link.com",
+            "img_path": "img.jpg",
+            "details": "Details for Example 4",
+            "boardId": "4",
+            "uId": "3"
+        }
+    },
+    "boards": {
+        "board0": {
+            "name": "Example Board 1",
+            "description": "Details for Example board 1",
+            "is_secret": true,
+            "id": "0",
+      "uId": "0"
+        },
+        "board1": {
+            "name": "Example Board 2",
+            "description": "Details for Example board 2",
+            "is_secret": true,
+            "id": "1",
+      "uId": "1"
+        },
+        "board2": {
+            "name": "Example Board 3",
+            "description": "Details for Example board 3",
+            "is_secret": false,
+            "id": "2",
+      "uId": "2"
+        },
+        "board3": {
+            "name": "Example Board 4",
+            "description": "Details for Example board 4",
+            "is_secret": false,
+            "id": "3",
+      "uId": "3"
+        }
+    },
+    "users": {
+        "user0": {
+            "name": "Ben",
+            "uId": "0"
+        },
+        "user1": {
+            "name": "Catilin",
+            "uId": "1"
+        },
+        "user2": {
+            "name": "Matt",
+            "uId": "2"
+        },
+        "user3": {
+            "name": "Alex",
+            "uId": "3"
+        }
+    }
+}
