@@ -1,14 +1,9 @@
 'use strict';
 
-<<<<<<< HEAD
-
-
-
-// $scope.toAddBoard = () => {
-//   $location.path(`/boards/newBoard`);
-// };
-=======
-app.controller("MyBoardsCtrl", function($scope) {
+app.controller("MyBoardsCtrl", function($location, $scope) {
     $scope.myBoards = "deez my boards";
+
+    $scope.toAddBoard = () => {
+        $location.path(`/newboard`);
+    };
 });
->>>>>>> master

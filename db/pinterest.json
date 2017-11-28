@@ -46,29 +46,25 @@
             "name": "Example Board 1",
             "description": "Details for Example board 1",
             "is_secret": true,
-            "id": "0",
-      "uId": "0"
+            "uId": "0"
         },
         "board1": {
             "name": "Example Board 2",
             "description": "Details for Example board 2",
             "is_secret": true,
-            "id": "1",
-      "uId": "1"
+            "uId": "1"
         },
         "board2": {
             "name": "Example Board 3",
             "description": "Details for Example board 3",
             "is_secret": false,
-            "id": "2",
-      "uId": "2"
+            "uId": "2"
         },
         "board3": {
             "name": "Example Board 4",
             "description": "Details for Example board 4",
             "is_secret": false,
-            "id": "3",
-      "uId": "3"
+            "uId": "3"
         }
     },
     "users": {

@@ -1,13 +1,5 @@
 'use strict';
 
-<<<<<<< HEAD
-app.config(function ($routeProvider) {
-  $routeProvider
-    .when("/boards/newBoard", {
-      templateUrl: 'partials/boards/newBoard.html',
-      controller: 'NewBoardCtrl'
-    });
-=======
 
 app.config(function($routeProvider)  {
 
@@ -41,5 +33,4 @@ app.config(function($routeProvider)  {
             controller: "AuthCtrl"
         })
         .otherwise("/auth");
->>>>>>> master
 });

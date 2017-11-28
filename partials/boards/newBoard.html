@@ -1,27 +1,26 @@
-<<<<<<< HEAD
 <div id="newBoard">
   <h1>Add a New Board</h1>
   
-  <form novalidate class="form-horizontal" name="newBoardForm" ng-submit="addNew(boardInfo)" ng-controller="NewBoardCtrl">
+  <form novalidate class="form-horizontal" name="newBoardForm" ng-submit="addNew(boardInfo)">
     <div class="form-group">
 
       <label for="boardName">Board Name:</label>
       <div>
-        <input type="text" class="form-control" id="boardName" placeholder="How it will appear to other users" ng-model="boardName" required>
+        <input type="text" class="form-control" id="boardName" placeholder="How it will appear to other users" ng-model="boardInfo.name" required>
       </div>
 
       <label for="boardDescription">Board Description:</label>
       <div>
-        <input type="text" class="form-control" id="boardDescription" placeholder="Say something about this board" ng-model="boardDescription" required>
+        <input type="text" class="form-control" id="boardDescription" placeholder="Say something about this board" ng-model="boardInfo.description" required>
       </div>
 
       <h4>Secret</h4>
       <label for="secretRadio">Only you will be able to see this board:</label>
       <div>
         <label class="radio-inline">
-          <input type="radio" name="secretRadio" ng-model="isSecret" value="true">Secret</label>
+          <input type="radio" name="secretRadio" ng-model="boardInfo.isSecret" value="true">Secret</label>
         <label class="radio-inline">
-          <input type="radio" name="secretRadio" ng-model="isSecret" value="false">Not a secret</label>
+          <input type="radio" name="secretRadio" ng-model="boardInfo.isSecret" value="false">Not a secret</label>
       </div>
 
       <div>
@@ -31,6 +30,3 @@
     </div>
   </form>
 </div>
-=======
-{{newBoard}}
->>>>>>> master
