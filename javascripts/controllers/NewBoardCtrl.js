@@ -1,5 +1,6 @@
 'use strict';
 
+<<<<<<< HEAD
 app.controller("NewBoardCtrl", function ($location, $rootScope, $scope, DataService) {
   
   $scope.master = {};
@@ -18,3 +19,8 @@ app.controller("NewBoardCtrl", function ($location, $rootScope, $scope, DataServ
   }); // end addNew
 
 }); // end controller
+=======
+app.controller("NewBoardCtrl", function($scope) {
+    $scope.newBoard = "dis for a new board";
+});
+>>>>>>> master
