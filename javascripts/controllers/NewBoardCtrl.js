@@ -1,9 +1,9 @@
 'use strict';
 
 app.controller("NewBoardCtrl", function ($location, $rootScope, $scope, DataService) {
-
+  
   $scope.master = {};
-console.log("here!");
+  console.log("here!");
 
   $scope.addNew = ((boardInfo) => {
     boardInfo.uId = $rootScope.uid;

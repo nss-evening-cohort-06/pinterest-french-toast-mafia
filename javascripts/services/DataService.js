@@ -1,7 +1,6 @@
 'use strict';
 
-app.service("DataService", function ($http, $scope, FIREBASE_CONFIG) {
-
+app.service("DataService", function ($http, $q, $scope, FIREBASE_CONFIG) {
 
   const postNewBoard = (newBoard) => {
     return $http.post(`${FIREBASE_CONFIG.databaseURL}/boards.json`, JSON.stringify(newBoard));
@@ -21,5 +20,5 @@ app.service("DataService", function ($http, $scope, FIREBASE_CONFIG) {
     postNewBoard,
     createBoard
   };
-  
+
 });
