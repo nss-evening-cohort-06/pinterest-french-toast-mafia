@@ -26,7 +26,7 @@ app.config(function($routeProvider)  {
         })
         .when("/allboards", {
             templateUrl: "partials/boards/allBoards.html",
-            controller: "AllPinsCtrl"
+            controller: "AllBoardsCtrl"
         })
         .when("/auth", {
             templateUrl: "partials/auth.html",
