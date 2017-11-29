@@ -10,9 +10,10 @@
         <h3>{{board.name}}</h3>
         <p>{{board.description}}</p>
         <p ng-show="board.is_secret">This is a secret board</p>
+        <button class="btn btn-default" ng-click="deleteMyBoard(board.id)">Delete Board</button>
       </div>
     </div>
   </div>
 </div>
 
-<button class="btn btn-default" ng-click="toAddBoard()">New Board</button>
+<button roll="button" class="btn btn-default" ng-click="toAddBoard()">New Board</button>
