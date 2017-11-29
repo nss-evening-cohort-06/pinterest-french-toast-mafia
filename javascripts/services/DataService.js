@@ -70,8 +70,8 @@ app.service("DataService", function ($http, $q, FIREBASE_CONFIG) {
     });
   };
 
-  const deleteBoard = (Id) => {
-    return $http.delete(`${FIREBASE_CONFIG.databaseURL}/boards/${Id}.json`);
+  const deleteBoard = (userUid) => {
+    return $http.delete(`${FIREBASE_CONFIG.databaseURL}/boards/${userUid}.json`);
   };
 
 
