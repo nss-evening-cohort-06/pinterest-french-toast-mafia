@@ -6,9 +6,8 @@ app.controller("NewPinsCtrl", function($location, $rootScope, $scope, DataServic
 
 
     $scope.addPin = (inputData) => {
-    	console.log("inputdata", inputData);
     	inputData.uid = $rootScope.uid;
-    		// getAllBoards();
+    		getAllBoards();
     		let board = inputData.boardId;
     		let newPin = DataService.createPinObject(inputData);
     		DataService.postNewPin(newPin, board).then (() => {
