@@ -70,13 +70,19 @@ app.service("DataService", function ($http, $q, FIREBASE_CONFIG) {
     });
   };
 
+  const deleteBoard = (userUid) => {
+    return $http.delete(`${FIREBASE_CONFIG.databaseURL}/boards/${userUid}.json`);
+  };
+
+
 
   return {
     getAllPins,
     postNewBoard,
     createBoard,
     getAllBoards,
-    getMyBoards
+    getMyBoards,
+    deleteBoard
   };
 
 }); 
