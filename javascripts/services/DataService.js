@@ -27,7 +27,7 @@ app.service("DataService", function ($http, $q, FIREBASE_CONFIG) {
       "name": boardInfo.name,
       "description": boardInfo.description,
       "is_secret": boardInfo.isSecret,
-      "id": boardInfo.id,
+      "id": Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5),
       "uId": boardInfo.uId,
     };
   };
