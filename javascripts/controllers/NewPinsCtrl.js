@@ -1,15 +1,15 @@
 'use strict';
 
-app.controller("NewPinsCtrl", function($location, $rootScope, $scope, DataService) {
+app.controller("NewPinsCtrl", function($location, $rootScope, $scope, DataService, PinService) {
     $scope.boards = [];
     $scope.pin = {};
 
 
     $scope.addPin = (inputData) => {
     	inputData.uId = $rootScope.uid;
-    		let newPin = DataService.createPinObject(inputData);
+    		let newPin = PinService.createPinObject(inputData);
            
-    		DataService.postNewPin(newPin).then (() => {
+    		PinService.postNewPin(newPin).then (() => {
     			$location.path('/mypins');
     		});
     };
