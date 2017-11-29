@@ -1,9 +1,9 @@
 'use strict';
 
-app.controller("AllPinsCtrl", function ($scope, DataService) {
+app.controller("AllPinsCtrl", function ($scope, PinService) {
 
     const showAllPins = () => {
-        DataService.getAllPins().then((results) => {
+        PinService.getAllPins().then((results) => {
             $scope.pins = results;
         }).catch((err) => {
             console.log("error in showAllPins", err);
