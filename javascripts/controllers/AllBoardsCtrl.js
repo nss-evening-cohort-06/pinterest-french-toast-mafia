@@ -1,5 +1,15 @@
 'use strict';
 
-app.controller("AllBoardCtrl", function ($scope) {
-    $scope.allBoards = "here are my boards";
+app.controller("AllBoardsCtrl", function($scope, DataService) {
+    const getBoards = () => {
+        DataService.getAllBoards().then((results) => {
+            $scope.boards = results;
+            console.log(results);
+        }).catch((error) => {
+            console.log("Error in getAllBoards", error);
+        });
+       };
+    
+       getBoards();
+       
 });
