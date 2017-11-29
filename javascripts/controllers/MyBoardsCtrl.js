@@ -15,6 +15,7 @@ app.controller("MyBoardsCtrl", function ($location, $rootScope, $scope, DataServ
         $location.path(`/newboard`);
     };
 
+
     $scope.deleteMyBoard = (Id) => {
     DataService.deleteBoard(Id).then((result) =>{
       getDaBoards();
@@ -22,7 +23,6 @@ app.controller("MyBoardsCtrl", function ($location, $rootScope, $scope, DataServ
       console.log("error in deleteMyBoard", err);
     });
   };
-
 
 
 
