@@ -6,6 +6,32 @@ app.service("DataService", function ($http, $q, FIREBASE_CONFIG) {
     return $http.post(`${FIREBASE_CONFIG.databaseURL}/boards.json`, JSON.stringify(newBoard));
   };
 
+  const getAllPins = () => {
+    let allPins = [];
+    return $q((resolve, reject) => {
+      $http.get(`${FIREBASE_CONFIG.databaseURL}/pins.json`).then((results) => {
+        let pins = results.data;
+        Object.keys(pins).forEach((key) => {
+          pins[key].id = key;
+          allPins.push(pins[key]);
+        });
+        resolve(allPins);
+      }).catch((error) => {
+        reject(error);
+      });
+    });
+  }; // end getAllPins() service
+
+  const createBoard = (boardInfo) => {
+    return {
+      "name": boardInfo.name,
+      "description": boardInfo.description,
+      "is_secret": boardInfo.isSecret,
+      "id": boardInfo.id,
+      "uId": boardInfo.uId,
+    };
+  };
+
   const getAllBoards = () => {
       let boards = [];
       return $q((resolve, reject) => {
@@ -17,8 +43,8 @@ app.service("DataService", function ($http, $q, FIREBASE_CONFIG) {
                     if (!fbBoards[key].is_secret) {
                         boards.push(fbBoards[key]);
                     }
-                    resolve(boards); 
-                });    
+                    resolve(boards);
+                });
             }
           }).catch((error) => {
               console.log("Error in database getAllBoards", error);
@@ -26,11 +52,10 @@ app.service("DataService", function ($http, $q, FIREBASE_CONFIG) {
       });
   };
 
-
-  
-
   return {
+    getAllPins,
     postNewBoard,
+    createBoard,
     getAllBoards
   };
 
