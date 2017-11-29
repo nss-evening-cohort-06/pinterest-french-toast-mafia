@@ -5,6 +5,8 @@
         <h3>{{board.name}}</h3>
         <p>{{board.description}}</p>
         <p ng-show="board.is_secret">This is a secret board</p>
+        <p ng-show="!board.is_secret">This is not a secret board</p>
+        <button class="btn btn-default" ng-click="editMyBoard(board.id)">Edit Board</button>
         <button class="btn btn-default" ng-click="deleteMyBoard(board.id)">Delete Board</button>
       </div>
     </div>

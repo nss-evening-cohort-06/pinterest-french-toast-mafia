@@ -75,6 +75,11 @@ app.config(function($routeProvider)  {
             controller: "AllBoardsCtrl",
             resolve: {isAuth}
         })
+        .when("/board/:id", {
+            templateUrl: "partials/boards/board_detail.html",
+            controller: "BoardDetailCtrl",
+            resolve: {isAuth}
+        })
         .when("/auth", {
             templateUrl: "partials/auth.html",
             controller: "AuthCtrl"
