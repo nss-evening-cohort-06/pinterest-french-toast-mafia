@@ -1,16 +1,15 @@
-
 <div>
-	<h1 class="mainHeader">Add a Pin</h1>
+	<h1 class="mainHeader col-sm-8 col-sm-offset-2 text-center">Add a Pin</h1>
 
-<div id="contacts">
+<div id="contacts" class="col-sm-8 col-sm-offset-2">
 	<form>
-	  <div class="form-group">
+	  <div class="form-group ">
 	    <label for="formGroupExampleInput">Name of Pin</label>
 	    <input type="text" class="form-control" id="formGroupExampleInput" ng-model="pin.name" placeholder="Add a name">
 	  </div>
 	  <div class="form-group">
-	    <label for="formGroupExampleInput2">Pin's home website</label>
-	    <input type="text" class="form-control" id="formGroupExampleInput2" ng-model="pin.url placeholder="Website where you found pin">
+	    <label for="formGroupExampleInput2">Pin's website</label>
+	    <input type="text" class="form-control" id="formGroupExampleInput2" ng-model="pin.url" placeholder="Where you found pin">
 	  </div>
 	  <div class="form-group">
 	    <label for="formGroupExampleInput2">Image (source link to image)</label>
@@ -20,27 +19,12 @@
 	    <label for="formGroupExampleInput2">Details</label>
 	    <input type="text" class="form-control" id="formGroupExampleInput2" ng-model="pin.details" placeholder="Details">
 	  </div>
-	</form>
-
-<!-- 
-<form class="form-horizontal" name="userForm">
-		  <div class="form-group">
-		    <label for="firstName" class="col-sm-2 control-label">First Name</label>
-		    <div class="col-sm-10">
-		      <input type="text" class="form-control" id="firstName" ng-model="contact.firstName" placeholder="First Name" required>
+	  <div class="form-group">
+		    <div class="col-sm-offset-2 col-sm-8 text-center">
+		      <button type="submit" class="btn btn-default" ng-click="addPin(contact)" ng-disabled="userForm.$invalid">Add Pin</button>
 		    </div>
-		  </div> -->
-
-
-          "name": "Example 1",
-            "url": "www.link.com",
-            "img_path": "img.jpg",
-            "details": "Details for Example 1",
-            "boardId": "",
-            "uId": "0"
-         
-
-
+		  </div>
+	</form>
 
 
 
