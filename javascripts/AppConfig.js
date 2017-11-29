@@ -1,5 +1,6 @@
 'use strict';
 
+
 let isAuth = (AuthService) => new Promise ((resolve, reject) => {
   if(AuthService.isAuthenticated()){
     resolve();
@@ -26,7 +27,7 @@ app.run(function($location, $rootScope, FIREBASE_CONFIG, AuthService){
       // check if the user is going to the auth page = currRoute.originalPath
       // if user is on auth page then appTo is true
       // if it finds something other than /auth it return a -1 and -1!==-1 so resolves to false
-      appTo = currRoute.originalPath.indexOf('/login') !== -1;
+      appTo = currRoute.originalPath.indexOf('/auth') !== -1;
       // appTo = currRoute.originalPath.indexOf('/auth') !== -1;
     }
 
@@ -37,5 +38,47 @@ app.run(function($location, $rootScope, FIREBASE_CONFIG, AuthService){
       // $location.path('/login');
     }
   });
+});
+
+
+
+app.config(function($routeProvider)  {
+
+    $routeProvider
+        .when("/mypins", {
+            templateUrl: "partials/pins/myPins.html",
+            controller: "MyPinsCtrl",
+            resolve: {isAuth}
+        })
+        .when("/newpin", {
+            templateUrl: "partials/pins/newPins.html",
+            controller: "NewPinsCtrl",
+            resolve: {isAuth}
+        })
+        .when("/allpins", {
+            templateUrl: "partials/pins/allPins.html",
+            controller: "AllPinsCtrl",
+            resolve: {isAuth}
+        })
+        .when("/myboards", {
+            templateUrl: "partials/boards/myBoards.html",
+            controller: "MyBoardsCtrl",
+            resolve: {isAuth}
+        })
+        .when("/newboard", {
+            templateUrl: "partials/boards/newBoard.html",
+            controller: "NewBoardCtrl",
+            resolve: {isAuth}
+        })
+        .when("/allboards", {
+            templateUrl: "partials/boards/allBoards.html",
+            controller: "AllBoardsCtrl",
+            resolve: {isAuth}
+        })
+        .when("/auth", {
+            templateUrl: "partials/auth.html",
+            controller: "AuthCtrl"
+        })
+        .otherwise("/auth");
 });
 
