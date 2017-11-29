@@ -12,5 +12,4 @@ app.controller("AllBoardsCtrl", function($scope, DataService) {
     
        getBoards();
        
-        
 });

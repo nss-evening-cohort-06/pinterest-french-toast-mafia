@@ -5,7 +5,7 @@
 	<form>
 		<div ng-repeat="board in boards">
 			<label>{{board.name}}</label>
-			<input  type="checkbox" class="form-control" ng-model="pin.board"> 
+			<input  type="radio" name="cow" class="form-control" ng-value="board.id" ng-model="pin.boardId"> 
 		</div>
 	  <div class="form-group ">
 	    <label for="formGroupExampleInput">Name of Pin</label>
