@@ -5,23 +5,23 @@
 	<form>
 	  <div class="form-group ">
 	    <label for="formGroupExampleInput">Name of Pin</label>
-	    <input type="text" class="form-control" id="formGroupExampleInput" ng-model="pin.name" placeholder="Add a name">
+	    <input type="text" class="form-control" ng-model="pin.name" placeholder="Add a name">
 	  </div>
 	  <div class="form-group">
 	    <label for="formGroupExampleInput2">Pin's website</label>
-	    <input type="text" class="form-control" id="formGroupExampleInput2" ng-model="pin.url" placeholder="Where you found pin">
+	    <input type="text" class="form-control" ng-model="pin.url" placeholder="Where you found pin">
 	  </div>
 	  <div class="form-group">
 	    <label for="formGroupExampleInput2">Image (source link to image)</label>
-	    <input type="text" class="form-control" id="formGroupExampleInput2" ng-model="pin.img_path"  placeholder="Link to image">
+	    <input type="text" class="form-control" ng-model="pin.img_path"  placeholder="Link to image">
 	  </div>
 	  <div class="form-group">
 	    <label for="formGroupExampleInput2">Details</label>
-	    <input type="text" class="form-control" id="formGroupExampleInput2" ng-model="pin.details" placeholder="Details">
+	    <input type="text" class="form-control" ng-model="pin.details" placeholder="Details">
 	  </div>
 	  <div class="form-group">
 		    <div class="col-sm-offset-2 col-sm-8 text-center">
-		      <button type="submit" class="btn btn-default" ng-click="addPin(contact)" ng-disabled="userForm.$invalid">Add Pin</button>
+		      <button type="submit" class="btn btn-default" ng-click="addPin(pin)" ng-disabled="userForm.$invalid">Add Pin</button>
 		    </div>
 		  </div>
 	</form>

@@ -5,11 +5,13 @@ app.controller("NewPinsCtrl", function($location, $rootScope, $scope, DataServic
 
 
 
-    $scope.addContact = (inputData) => {
+    $scope.addPin = (inputData) => {
+    	console.log("inputdata", inputData);
     	inputData.uid = $rootScope.uid;
-
+    		// getAllBoards();
+    		let board = inputData.boardId;
     		let newPin = DataService.createPinObject(inputData);
-    		DataService.postNewPin(newPin).then (() => {
+    		DataService.postNewPin(newPin, board).then (() => {
     			$location.path('/pins/mypins');
     		});
     };
@@ -22,5 +24,10 @@ app.controller("NewPinsCtrl", function($location, $rootScope, $scope, DataServic
  		}); 	
     };
 
+    $scope.boardDropdown = (inputData) => {
+
+    };
+
+ 
 
 });
