@@ -52,11 +52,31 @@ app.service("DataService", function ($http, $q, FIREBASE_CONFIG) {
       });
   };
 
+  const getMyBoards = (userUid) => {
+    let boards = [];
+    return $q((resolve, reject) => {
+        $http.get(`${FIREBASE_CONFIG.databaseURL}/boards.json?orderBy="uId"&equalTo="${userUid}"`).then((results) => {
+          let fbBoards = results.data;
+          if (fbBoards != null) {
+              Object.keys(fbBoards).forEach((key) => {
+                  fbBoards[key].id = key;
+                  boards.push(fbBoards[key]);
+                  resolve(boards);
+              });
+          }
+        }).catch((error) => {
+            console.log("Error in database getAllBoards", error);
+        });
+    });
+  };
+
+
   return {
     getAllPins,
     postNewBoard,
     createBoard,
-    getAllBoards
+    getAllBoards,
+    getMyBoards
   };
 
 }); 
