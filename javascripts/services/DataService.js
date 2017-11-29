@@ -33,23 +33,23 @@ app.service("DataService", function ($http, $q, FIREBASE_CONFIG) {
   };
 
   const getAllBoards = () => {
-      let boards = [];
-      return $q((resolve, reject) => {
-          $http.get(`${FIREBASE_CONFIG.databaseURL}/boards.json`).then((results) => {
-            let fbBoards = results.data;
-            if (fbBoards != null) {
-                Object.keys(fbBoards).forEach((key) => {
-                    fbBoards[key].id = key;
-                    if (!fbBoards[key].is_secret) {
-                        boards.push(fbBoards[key]);
-                    }
-                    resolve(boards);
-                });
+    let boards = [];
+    return $q((resolve, reject) => {
+      $http.get(`${FIREBASE_CONFIG.databaseURL}/boards.json`).then((results) => {
+        let fbBoards = results.data;
+        if (fbBoards != null) {
+          Object.keys(fbBoards).forEach((key) => {
+            fbBoards[key].id = key;
+            if (!fbBoards[key].is_secret) {
+              boards.push(fbBoards[key]);
             }
-          }).catch((error) => {
-              console.log("Error in database getAllBoards", error);
+            resolve(boards);
           });
+        }
+      }).catch((error) => {
+        console.log("Error in database getAllBoards", error);
       });
+    });
   };
 
   const getMyBoards = (userUid) => {

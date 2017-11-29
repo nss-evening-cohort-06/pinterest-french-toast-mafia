@@ -1,11 +1,14 @@
 <div class="row">
-    <div class="col-sm-6 col-md-4" ng-repeat="board in boards">
-      <div class="thumbnail">
-        <div class="caption">
-          <h3>{{board.name}}</h3>
-          <p>{{board.description}}</p>
-          <p ng-show="board.is_secret">This is a secret board</p>
-        </div>
+  <div class="col-sm-6 col-md-4" ng-repeat="board in boards">
+    <div class="thumbnail">
+      <div class="caption">
+        <h3>{{board.name}}</h3>
+        <p>{{board.description}}</p>
+        <p ng-show="board.is_secret">This is a secret board</p>
+        <button class="btn btn=default" ng-click="deleteMyBoard()">Delete Board</button>
       </div>
     </div>
   </div>
+</div>
+
+<button class="btn btn-default" ng-click="toAddBoard()">New Board</button>
