@@ -3,6 +3,7 @@
 app.service("DataService", function ($http, $q, FIREBASE_CONFIG) {
 
   const postNewBoard = (newBoard) => {
+    console.log("newboard in posting", newBoard);
     return $http.post(`${FIREBASE_CONFIG.databaseURL}/boards.json`, JSON.stringify(newBoard));
   };
 
@@ -27,7 +28,7 @@ app.service("DataService", function ($http, $q, FIREBASE_CONFIG) {
       "name": boardInfo.name,
       "description": boardInfo.description,
       "is_secret": boardInfo.isSecret,
-      "id": Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5),
+      "id": boardInfo.id,
       "uId": boardInfo.uId,
     };
   };
