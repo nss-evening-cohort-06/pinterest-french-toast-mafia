@@ -3,6 +3,10 @@
 
 <div id="contacts" class="col-sm-8 col-sm-offset-2">
 	<form>
+		<div ng-repeat="board in boards">
+			<label>{{board.name}}</label>
+			<input  type="checkbox" class="form-control" ng-model="pin.board"> 
+		</div>
 	  <div class="form-group ">
 	    <label for="formGroupExampleInput">Name of Pin</label>
 	    <input type="text" class="form-control" ng-model="pin.name" placeholder="Add a name">

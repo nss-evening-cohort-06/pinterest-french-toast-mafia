@@ -23,6 +23,8 @@ app.controller("NewPinsCtrl", function($location, $rootScope, $scope, DataServic
  		}); 	
     };
 
+    getAllBoards();
+    
     $scope.boardDropdown = (inputData) => {
 
     };
