@@ -16,4 +16,12 @@ app.controller("MyPinsCtrl", function($rootScope, $scope, PinService, $location)
     $location.path(`/pins/edit/${Id}`);
   };
 
+    $scope.deletePin = (pinId) => {
+        PinService.deleteMyPin(pinId).then((results) => {
+            getUserPins();
+        }).catch((error) => {
+            console.log("Error in deleteMyPin", error);
+        });
+    };
+
 });

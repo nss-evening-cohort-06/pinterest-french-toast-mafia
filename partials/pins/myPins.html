@@ -1,6 +1,7 @@
 <div>
     <div ng-repeat="pin in pins" class="col-sm-6 col-md-4">
         <div class="thumbnail">
+        <button class="btn btn-danger delete" ng-click="deletePin(pin.id)"><i class="fa fa-trash-o"></i></button>
         <img ng-src="{{pin.img_path}}">
         <div class="caption">
             <h3>{{pin.name}}</h3>
