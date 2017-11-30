@@ -22,7 +22,23 @@ app.service("PinService", function ($http, $q, FIREBASE_CONFIG) {
 	        reject(error);
 	      });
 	    });
-	  }; // end getAllPins() service
+		}; // end getAllPins() service
+		
+		const getMuhPins = (userUid) => {
+	    let myPins = [];
+	    return $q((resolve, reject) => {
+	      $http.get(`${FIREBASE_CONFIG.databaseURL}/pins.json?orderBy="uId"&equalTo="${userUid}"`).then((results) => {
+	        let pins = results.data;
+	        Object.keys(pins).forEach((key) => {
+	          pins[key].id = key;
+	          myPins.push(pins[key]);
+	        });
+	        resolve(myPins);
+	      }).catch((error) => {
+	        reject(error);
+	      });
+	    });
+	  };
 
 	const createPinObject = (pinInfo) => {
 	    return {
@@ -40,6 +56,7 @@ app.service("PinService", function ($http, $q, FIREBASE_CONFIG) {
     return $http.put(`${FIREBASE_CONFIG.databaseURL}/pins/${pinId}.json`, JSON.stringify(editPin));
 };
 
-    return {getAllPins, createPinObject,  postNewPin, editPin};
+  
+    return {getAllPins, createPinObject,  postNewPin, getMuhPins, editPin};
 });
   
