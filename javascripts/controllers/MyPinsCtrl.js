@@ -12,7 +12,7 @@ app.controller("MyPinsCtrl", function($rootScope, $scope, PinService, $location)
 
     getUserPins();
 
-     $scope.editDetail = (Id) => {
+     $scope.editPin = (Id) => {
     $location.path(`/pins/edit/${Id}`);
   };
 
