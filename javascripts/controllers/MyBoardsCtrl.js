@@ -22,8 +22,13 @@ app.controller("MyBoardsCtrl", function ($location, $rootScope, $scope, DataServ
     }).catch((err) =>{
       console.log("error in deleteMyBoard", err);
     });
+
+
   };
 
+  $scope.editMyBoard = (boardId) => {
+    $location.path(`/board/${boardId}`);
+};
 
 
 

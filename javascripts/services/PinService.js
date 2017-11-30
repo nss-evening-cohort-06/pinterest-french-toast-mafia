@@ -35,8 +35,9 @@ app.service("PinService", function ($http, $q, FIREBASE_CONFIG) {
 	    };
 	};
 
-	const editPin = (pin, pinId) => {
-    return $http.put(`${FIREBASE_CONFIG.databaseURL}/pins/${pinId}.json`, JSON.stringify(pin));
+	const editPin = (editPin, pinId) => {
+		let pinObject = createPinObject(editPin);
+    return $http.put(`${FIREBASE_CONFIG.databaseURL}/pins/${pinId}.json`, JSON.stringify(editPin));
 };
 
     return {getAllPins, createPinObject,  postNewPin, editPin};

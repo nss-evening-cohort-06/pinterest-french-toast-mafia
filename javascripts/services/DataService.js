@@ -13,8 +13,7 @@ app.service("DataService", function ($http, $q, FIREBASE_CONFIG) {
     return {
       "name": boardInfo.name,
       "description": boardInfo.description,
-      "is_secret": boardInfo.isSecret,
-      "id": boardInfo.id,
+      "is_secret": boardInfo.is_secret,
       "uId": boardInfo.uId,
     };
   };
@@ -48,6 +47,11 @@ app.service("DataService", function ($http, $q, FIREBASE_CONFIG) {
           if (fbBoards != null) {
               Object.keys(fbBoards).forEach((key) => {
                   fbBoards[key].id = key;
+                  if (fbBoards[key].is_secret === 'true') {
+                    fbBoards[key].is_secret = true;
+                  } else {
+                    fbBoards[key].is_secret = false;
+                  }
                   boards.push(fbBoards[key]);
                   resolve(boards);
               });
@@ -58,10 +62,18 @@ app.service("DataService", function ($http, $q, FIREBASE_CONFIG) {
     });
   };
 
+  const getBoard = (boardId) => {
+    return $http.get(`${FIREBASE_CONFIG.databaseURL}/boards/${boardId}.json`);
+  };
+
   const deleteBoard = (userUid) => {
     return $http.delete(`${FIREBASE_CONFIG.databaseURL}/boards/${userUid}.json`);
   };
 
+  const editMyBoard = (editedBoard, boardId) => {
+    let boardObject = createBoard(editedBoard);
+    return $http.put(`${FIREBASE_CONFIG.databaseURL}/boards/${boardId}.json`, JSON.stringify(editedBoard));
+  };
 
 
   return {
@@ -70,6 +82,8 @@ app.service("DataService", function ($http, $q, FIREBASE_CONFIG) {
     getAllBoards,
     getMyBoards,
     deleteBoard,
+    getBoard,
+    editMyBoard
 
   };
 

@@ -1,0 +1,33 @@
+<div id="newBoard">
+    <h1>Edit Board</h1>
+    
+    <form novalidate class="form-horizontal" name="newBoardForm" ng-submit="editBoard(boardInfo)">
+      <div class="form-group">
+  
+        <label for="boardName">Board Name:</label>
+        <div>
+          <input type="text" class="form-control" id="boardName" placeholder="How it will appear to other users" ng-model="board.name" required>
+        </div>
+  
+        <label for="boardDescription">Board Description:</label>
+        <div>
+          <input type="text" class="form-control" id="boardDescription" placeholder="Say something about this board" ng-model="board.description" required>
+        </div>
+  
+        <h4>Secret</h4>
+        <label for="secretRadio">Only you will be able to see this board:</label>
+        <div>
+            <p ng-if="board.is_secret">This is currently a secret board.</p>
+          <label class="radio-inline">
+            <input type="radio" name="secretRadio" ng-model="boardInfo.is_secret" value="true" required>Secret</label>
+          <label class="radio-inline">
+            <input type="radio" name="secretRadio" ng-model="boardInfo.is_secret" value="false">Not a secret</label>
+        </div>
+  
+        <div>
+          <button ng-if="newBoardForm.$valid" type="submit" class="btn btn-default" value="Save">Save Board</button>
+        </div>
+        
+      </div>
+    </form>
+  </div>
