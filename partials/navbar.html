@@ -14,12 +14,11 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav" ng-show="uid">
-              <li><a href="#!/mypins">My Pins</a></li>
-              <li><a href="#!/myboards">My Boards</a></li>
               <li role="separator" class="divider"></li>
               <li><a href="#!/newpin">Add Pin</a></li>
               <li role="separator" class="divider"></li>
               <li><a href="#!/newboard">Add Board</a></li>
+              <li><a href="#!/myboards">"{{user.name}}"</a></li>
               <li><a ng-click="logoutUser()">Logout</a></li>
               
         </ul>
