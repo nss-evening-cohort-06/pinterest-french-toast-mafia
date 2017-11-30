@@ -1,0 +1,38 @@
+<div>
+	<h1 class="mainHeader col-sm-8 col-sm-offset-2 text-center">Save a Pin</h1>
+
+<div id="contacts" class="col-sm-8 col-sm-offset-2">
+	<form>
+		<div ng-repeat="board in boards">
+			<label>{{board.name}}</label>
+			<input  type="radio" name="cow" class="form-control" ng-value="board.id" ng-model="pin.boardId"> 
+		</div>
+	  <div class="form-group ">
+	    <label for="formGroupExampleInput">Name of Pin</label>
+	    <input type="text" class="form-control" ng-model="pin.name" placeholder="Add a name">
+	  </div>
+	  <div class="form-group">
+	    <label for="formGroupExampleInput2">Pin's website</label>
+	    <input type="text" class="form-control" ng-model="pin.url" placeholder="Where you found pin">
+	  </div>
+	  <div class="form-group">
+	    <label for="formGroupExampleInput2">Image (source link to image)</label>
+	    <input type="text" class="form-control" ng-model="pin.img_path"  placeholder="Link to image">
+	  </div>
+	  <div class="form-group">
+	    <label for="formGroupExampleInput2">Details</label>
+	    <input type="text" class="form-control" ng-model="pin.details" placeholder="Details">
+	  </div>
+	  <div class="form-group">
+		    <div class="col-sm-offset-2 col-sm-8 text-center">
+		      <button type="submit" class="btn btn-default" ng-click="addSavedPin(pin)" ng-disabled="userForm.$invalid">Save Pin</button>
+		    </div>
+		  </div>
+	</form>
+
+
+
+
+</div>
+
+</div>

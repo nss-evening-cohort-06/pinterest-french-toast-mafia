@@ -1,6 +1,6 @@
 'use strict';
 
-app.controller("AllPinsCtrl", function ($scope, PinService) {
+app.controller("AllPinsCtrl", function ($location, $scope, PinService) {
 
     const showAllPins = () => {
         PinService.getAllPins().then((results) => {
@@ -10,6 +10,11 @@ app.controller("AllPinsCtrl", function ($scope, PinService) {
         });
     }; // end showallPins()
 
+	$scope.savePin = (pinId) => {
+        console.log("pinid", pinId);
+		$location.path(`/pin/${pinId}`);
+	};
+	
     showAllPins();
 
 }); // end controller
