@@ -1,27 +1,38 @@
 'use strict';
 
-app.controller("EditPinCtrl", function($location, $scope, $rootScope, PinService, $routeParams){
+app.controller("EditPinCtrl", function($location, $scope, $rootScope, PinService, $routeParams, DataService){
 
-const getPins = () => {
-        PinService.getMuhPins($rootScope.uid).then((results) => {
-            $scope.pins = results.data;
+const getPin = () => {
+	console.log("getpin routeParams", $routeParams.id);
+        PinService.getPin($routeParams.id).then((results) => {
+            $scope.pin = results;
+            console.log("getpin", $scope.pin);
         }).catch((error) => {
             console.log("Error in getPins", error);
         });
     };
 
-$scope.editPins = (boardInfo) => {
+$scope.editPin = (userUid) => {
         let editedPin = $scope.pin;
         PinService.editPin(editedPin, $routeParams.id).then((results) => {
-            $location.path("/myPins");
+            $location.path("/pins/myPins");
         }).catch((error) => {
             console.log("Error in editPins", error);
         });
     };
 
+const getAllBoards = () => {
+    	DataService.getMyBoards($rootScope.uid).then((results) => {
+    			$scope.boards = results;
+ 		}).catch((err) => {
+ 			console.log("error in getAllBoards", err);
+ 		}); 	
+    };
+
+    getAllBoards();
 
 
-    getPins();
+    getPin();
 
 
 
