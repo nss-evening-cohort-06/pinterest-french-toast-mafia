@@ -1,26 +1,13 @@
 'use strict';
 
+
+
 app.service("DataService", function ($http, $q, FIREBASE_CONFIG) {
 
   const postNewBoard = (newBoard) => {
     return $http.post(`${FIREBASE_CONFIG.databaseURL}/boards.json`, JSON.stringify(newBoard));
   };
 
-  const getAllPins = () => {
-    let allPins = [];
-    return $q((resolve, reject) => {
-      $http.get(`${FIREBASE_CONFIG.databaseURL}/pins.json`).then((results) => {
-        let pins = results.data;
-        Object.keys(pins).forEach((key) => {
-          pins[key].id = key;
-          allPins.push(pins[key]);
-        });
-        resolve(allPins);
-      }).catch((error) => {
-        reject(error);
-      });
-    });
-  }; // end getAllPins() service
 
   const createBoard = (boardInfo) => {
     return {
@@ -30,6 +17,7 @@ app.service("DataService", function ($http, $q, FIREBASE_CONFIG) {
       "uId": boardInfo.uId,
     };
   };
+
 
   const getAllBoards = () => {
     let boards = [];
@@ -66,7 +54,6 @@ app.service("DataService", function ($http, $q, FIREBASE_CONFIG) {
                   }
                   boards.push(fbBoards[key]);
                   resolve(boards);
-                  console.log(boards);
               });
           }
         }).catch((error) => {
@@ -90,7 +77,6 @@ app.service("DataService", function ($http, $q, FIREBASE_CONFIG) {
 
 
   return {
-    getAllPins,
     postNewBoard,
     createBoard,
     getAllBoards,
@@ -98,6 +84,7 @@ app.service("DataService", function ($http, $q, FIREBASE_CONFIG) {
     deleteBoard,
     getBoard,
     editMyBoard
+
   };
 
 }); 

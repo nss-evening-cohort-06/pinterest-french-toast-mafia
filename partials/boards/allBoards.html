@@ -1,10 +1,15 @@
+<div class="input-group input-group-lg col-xs-6 col-xs-offset-3">
+  <span class="input-group-addon glyphicon glyphicon-search" aria-hidden="true"></span>
+  <input type="text" class="form-control" placeholder="Search boards by: name, description, etc." ng-model="searchText">
+</div>
+
 <div class="row">
-    <div class="col-sm-6 col-md-4" ng-repeat="board in boards">
-      <div class="thumbnail">
-        <div class="caption">
-          <h3>{{board.name}}</h3>
-          <p>{{board.description}}</p>
-        </div>
+  <div class="col-sm-6 col-md-4" ng-repeat="board in boards| filter: {name:searchText, description:searchText}">
+    <div class="thumbnail">
+      <div class="caption">
+        <h3>{{board.name}}</h3>
+        <p>{{board.description}}</p>
       </div>
     </div>
   </div>
+</div>
