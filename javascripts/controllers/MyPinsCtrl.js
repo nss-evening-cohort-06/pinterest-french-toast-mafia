@@ -14,7 +14,7 @@ app.controller("MyPinsCtrl", function($location, $rootScope, $scope, DataService
     getUserPins();
 
      $scope.editPin = (Id) => {
-    $location.path(`/pins/edit/${Id}`);
+    $location.path(`/edit/${Id}`);
   };
 
     $scope.deletePin = (pinId) => {

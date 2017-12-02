@@ -3,20 +3,19 @@
 app.controller("EditPinCtrl", function($location, $scope, $rootScope, PinService, $routeParams, DataService){
 
 const getPin = () => {
-	console.log("getpin routeParams", $routeParams.id);
-        PinService.getPin($routeParams.id).then((results) => {
-            $scope.pin = results;
-            console.log("getpin", $scope.pin);
+        PinService.getSinglePin($routeParams.id).then((results) => {
+            $scope.pin = results.data;
         }).catch((error) => {
             console.log("Error in getPins", error);
         });
     };
 
-$scope.editPin = (pin, userUid) => {
+$scope.editPin = (pinId) => {
+        // $location.path('/edit/pinId')
         let editedPin = $scope.pin;
         PinService.editPin(editedPin, $routeParams.id).then((results) => {
             getPin();
-            $location.path("/pins/myPins");
+            $location.path("/mypins");
         }).catch((error) => {
             console.log("Error in editPins", error);
         });
