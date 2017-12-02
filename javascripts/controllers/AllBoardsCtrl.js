@@ -1,14 +1,17 @@
 'use strict';
 
-app.controller("AllBoardsCtrl", function($scope, DataService) {
+app.controller("AllBoardsCtrl", function ($location, $scope, DataService) {
     const getBoards = () => {
         DataService.getAllBoards().then((results) => {
             $scope.boards = results;
         }).catch((error) => {
             console.log("Error in getAllBoards", error);
         });
-       };
-    
-       getBoards();
-       
+    };
+
+    getBoards();
+
+    $scope.seeThisBoardsPins = (boardId) => {
+        $location.path(`/pinsbyboard/${boardId}`);
+    };
 });

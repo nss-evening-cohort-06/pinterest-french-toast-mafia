@@ -35,7 +35,10 @@
         <h3 class="boardName">{{pin.name}}</h3>
         <p>{{pin.details}}</p>
         <p>
+
           <a target="_blank" href="{{pin.url}}" class="btn btn-primary primaryButton" role="button">See Content</a>
+          <button ng-click="editPin(pin.id)" class="btn btn-primary"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+
         </p>
       </div>
     </div>

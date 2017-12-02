@@ -1,0 +1,17 @@
+<div>
+  <div ng-repeat="pin in pins | filter: searchText" class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img src="{{pin.img_path}}" alt="{{pin.img_path}}">
+      <div class="caption">
+        <h3>{{pin.name}}</h3>
+        <p>{{pin.details}}</p>
+        <p>
+          <a target="_blank" href="{{pin.url}}" class="btn btn-primary" role="button">See Content</a>
+
+          <button class="btn btn-primary detail" role="button" ng-click="savePin(pin.id)">
+            <i class="fa fa-heart" aria-hidden="true"></i>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

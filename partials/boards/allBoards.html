@@ -4,7 +4,7 @@
 </div>
 
 <div class="row">
-  <div class="col-sm-6 col-md-4" ng-repeat="board in boards| filter: {name:searchText, description:searchText}">
+  <div class="col-sm-6 col-md-4 board-cards" ng-click="seeThisBoardsPins(board.id)" ng-repeat="board in boards| filter: {name:searchText, description:searchText}">
     <div class="thumbnail">
       <div class="caption">
         <h3>{{board.name}}</h3>

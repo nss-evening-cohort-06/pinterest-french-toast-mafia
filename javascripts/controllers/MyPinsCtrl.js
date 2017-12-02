@@ -1,5 +1,6 @@
 'use strict';
 
+
 app.controller("MyPinsCtrl", function($location, $rootScope, $scope, DataService, PinService) {
 
     const getUserPins = () => {
@@ -12,6 +13,10 @@ app.controller("MyPinsCtrl", function($location, $rootScope, $scope, DataService
 
     getUserPins();
 
+     $scope.editPin = (Id) => {
+    $location.path(`/edit/${Id}`);
+  };
+
     $scope.deletePin = (pinId) => {
         PinService.deleteMyPin(pinId).then((results) => {
             getUserPins();
@@ -19,6 +24,7 @@ app.controller("MyPinsCtrl", function($location, $rootScope, $scope, DataService
             console.log("Error in deleteMyPin", error);
         });
     };
+
 
     
     $scope.seeMyBoards = () => {
