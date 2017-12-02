@@ -1,175 +1,131 @@
 {
     "pins": {
         "pin0": {
-            "name": "Example 1",
+            "name": "Small dogs, Big dog",
             "url": "www.link.com",
-            "img_path": "img.jpg",
-            "details": "Details for Example 1",
+            "img_path": "http://www.franklincountydogs.com/adopt/assets/images/adoptable-size.jpg",
+            "details": "Dog Pictures!",
             "boardId": "",
             "uId": "4KTdLuL5elQ1CJEwfjRZSgosimt2"
         },
         "pin1": {
-            "name": "Example 2",
+            "name": "Dr. Cat",
             "url": "www.link.com",
-            "img_path": "img.jpg",
-            "details": "Details for Example 2",
+            "img_path": "https://cdn.shopify.com/s/files/1/0344/6469/products/New-Cute-Pet-Cat-Costume-Cartoon-Funny-Pet-Cat-Clothes-Hot-Puppy-Clothing-Doctor-Uniform-Hat_copy_1024x1024.jpg?v=1504800100",
+            "details": "The cat is a Dr.",
             "boardId": "1",
             "uId": "4KTdLuL5elQ1CJEwfjRZSgosimt2"
         },
         "pin2": {
-            "name": "Example 3",
+            "name": "BiG Sun",
             "url": "www.link.com",
-            "img_path": "img.jpg",
-            "details": "Details for Example 3",
+            "img_path": "http://is1.mzstatic.com/image/thumb/Purple117/v4/92/df/37/92df3775-8aba-49db-f194-36204280b81e/source/1200x630bb.jpg",
+            "details": "Big Sunset!",
             "boardId": "2",
             "uId": "4KTdLuL5elQ1CJEwfjRZSgosimt2"
         },
         "pin3": {
-            "name": "Example 4",
+            "name": "How To Hide A Hose",
             "url": "www.link.com",
-            "img_path": "img.jpg",
-            "details": "Details for Example 4",
+            "img_path": "https://www.kregtool.com/webres/Image/hose-hiding-planter-300x300.jpg",
+            "details": "Tired of your hose getting in the way!",
             "boardId": "3",
             "uId": "7Dv43BubohPRULKuuQVCO9PV7bD3"
         },
         "pin4": {
-            "name": "Example 5",
+            "name": "Sleepy Dog",
             "url": "www.link.com",
-            "img_path": "img.jpg",
-            "details": "Details for Example 5",
+            "img_path": "https://s7d1.scene7.com/is/image/PETCO/puppy-090517-dog-featured-355w-200h-d",
+            "details": "A little puppy",
             "boardId": "",
             "uId": "7Dv43BubohPRULKuuQVCO9PV7bD3"
         },
         "pin5": {
-            "name": "Example 6",
+            "name": "I fixed it!",
             "url": "www.link.com",
-            "img_path": "img.jpg",
-            "details": "Details for Example 6",
+            "img_path": "https://i.ytimg.com/vi/iRXJXaLV0n4/hqdefault.jpg",
+            "details": "You don't want to know what happened!",
             "boardId": "1",
             "uId": "7Dv43BubohPRULKuuQVCO9PV7bD3"
         },
         "pin6": {
-            "name": "Example 7",
+            "name": "African Sunset",
             "url": "www.link.com",
-            "img_path": "img.jpg",
-            "details": "Details for Example 6",
+            "img_path": "https://static.pexels.com/photos/417142/pexels-photo-417142.jpeg",
+            "details": "Sunset in Africa",
             "boardId": "2",
             "uId": "OqXK9x8HDOQ0w7xC2jvLNJuMXaw1"
         },
         "pin7": {
-            "name": "Example 8",
+            "name": "Playground Climbing Wall",
             "url": "www.link.com",
-            "img_path": "img.jpg",
-            "details": "Details for Example 8",
+            "img_path": "http://www.woohome.com/wp-content/uploads/2015/02/diy-backyard-projects-kid-woohome-4.jpg",
+            "details": "Learn to mountain climb after you swing!",
             "boardId": "3",
             "uId": "OqXK9x8HDOQ0w7xC2jvLNJuMXaw1"
         },
         "pin8": {
-            "name": "Example 9",
+            "name": "Smart Dog!",
             "url": "www.link.com",
-            "img_path": "img.jpg",
-            "details": "Details for Example 9",
+            "img_path": "http://worldwideinterweb.com/wp-content/uploads/2016/08/dog-math-meme.jpg",
+            "details": "The dog did the math!",
             "boardId": "",
             "uId": "OqXK9x8HDOQ0w7xC2jvLNJuMXaw1"
         },
         "pin9": {
-            "name": "Example 10",
+            "name": "Cat must work in retail",
             "url": "www.link.com",
-            "img_path": "img.jpg",
-            "details": "Details for Example 10",
+            "img_path": "http://quotesnhumor.com/wp-content/uploads/2015/07/Top-30-Funny-Cat-Memes-Funniest.jpg",
+            "details": "I can relate",
             "boardId": "1",
             "uId": "oA1nChSjbuVYHawc591J8a7VMmm1"
         },
         "pin10": {
-            "name": "Example 11",
+            "name": "Island Sunset",
             "url": "www.link.com",
-            "img_path": "img.jpg",
-            "details": "Details for Example 11",
+            "img_path": "https://pixabay.com/p-1651426/?no_redirect",
+            "details": "Palm Trees, Sunset",
             "boardId": "2",
             "uId": "oA1nChSjbuVYHawc591J8a7VMmm1"
         },
         "pin11": {
-            "name": "Example 12",
+            "name": "How to Build an Awesome Firepit",
             "url": "www.link.com",
-            "img_path": "img.jpg",
-            "details": "Details for Example 12",
+            "img_path": "http://www.homemade-modern.com/wp-content/uploads/2014/09/hmm_ep46_concretefirepit_thumb-240x240.jpg",
+            "details": "Firepits are awesome!",
             "boardId": "3",
             "uId": "oA1nChSjbuVYHawc591J8a7VMmm1"
         }
        
     },
     "boards": {
-        "board0": {
-            "name": "Example Board 1",
-            "description": "Details for Example board 1",
+        "Dog Board": {
+            "name": "Puppies and Dogs!",
+            "description": "Pictures of dogs",
             "is_secret": true,
+            "id": "",
             "uId": "4KTdLuL5elQ1CJEwfjRZSgosimt2"
         },
-        "board1": {
-            "name": "Example Board 2",
-            "description": "Details for Example board 2",
+        "Cat Board": {
+            "name": "Catzzzz",
+            "description": "Pictures of cats",
             "is_secret": true,
+            "id": "1",
             "uId": "4KTdLuL5elQ1CJEwfjRZSgosimt2"
         },
-        "board2": {
-            "name": "Example Board 3",
-            "description": "Details for Example board 3",
+        "Sunsets!": {
+            "name": "Sunsets From Around the World",
+            "description": "The Sun coming down from the sky!",
             "is_secret": false,
+            "id": "2",
             "uId": "4KTdLuL5elQ1CJEwfjRZSgosimt2"
         },
-        "board3": {
+        "DIY Outdoor Projects": {
             "name": "Example Board 4",
             "description": "Details for Example board 4",
             "is_secret": false,
+            "id": "3",
             "uId": "7Dv43BubohPRULKuuQVCO9PV7bD3"
-        },
-        "board4": {
-            "name": "Example Board 5",
-            "description": "Details for Example board 4",
-            "is_secret": false,
-            "uId": "7Dv43BubohPRULKuuQVCO9PV7bD3"
-        },
-        "board5": {
-            "name": "Example Board 6",
-            "description": "Details for Example board 4",
-            "is_secret": false,
-            "uId": "oA1nChSjbuVYHawc591J8a7VMmm1"
-        },
-        "board6": {
-            "name": "Example Board 7",
-            "description": "Details for Example board 4",
-            "is_secret": false,
-            "uId": "oA1nChSjbuVYHawc591J8a7VMmm1"
-        },
-        "board7": {
-            "name": "Example Board 8",
-            "description": "Details for Example board 4",
-            "is_secret": false,
-            "uId": "oA1nChSjbuVYHawc591J8a7VMmm1"
-        },
-        "board8": {
-            "name": "Example Board 9",
-            "description": "Details for Example board 4",
-            "is_secret": false,
-            "uId": "7Dv43BubohPRULKuuQVCO9PV7bD3"
-        },
-        "board9": {
-            "name": "Example Board 10",
-            "description": "Details for Example board 4",
-            "is_secret": false,
-            "uId": "OqXK9x8HDOQ0w7xC2jvLNJuMXaw1"
-        },
-        "board10": {
-            "name": "Example Board 11",
-            "description": "Details for Example board 4",
-            "is_secret": false,
-            "uId": "OqXK9x8HDOQ0w7xC2jvLNJuMXaw1"
-        },
-        "board11": {
-            "name": "Example Board 12",
-            "description": "Details for Example board 4",
-            "is_secret": false,
-            "uId": "OqXK9x8HDOQ0w7xC2jvLNJuMXaw1"
         }
     },
     "users": {
