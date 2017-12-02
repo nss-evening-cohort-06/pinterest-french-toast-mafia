@@ -30,11 +30,9 @@ app.controller("SavePinCtrl", function($location, $routeParams, $rootScope, $sco
 		$scope.addSavedPin = (pin) => {
 			let updatedPin = PinService.createPinObject(pin);
 			updatedPin.uId = $rootScope.uid;
-			console.log("Updaed pin", updatedPin);
 			PinService.saveSinglePin(updatedPin, $routeParams.id).then((result) => {
 				getPinInfo();
 				$location.path('/mypins');
-				console.log("getPinInfo", result);
 			}).catch((err) => {
 				console.log("error in update pins", err);
 			});	
