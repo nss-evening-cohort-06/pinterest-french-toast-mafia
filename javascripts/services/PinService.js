@@ -38,7 +38,11 @@ app.service("PinService", function ($http, $q, FIREBASE_CONFIG) {
 	        reject(error);
 	      });
 	    });
-	  };
+		};
+		
+		const deleteMyPin = (pinId) => {
+			return $http.delete(`${FIREBASE_CONFIG.databaseURL}/pins/${pinId}.json`);
+		};
 
 	const createPinObject = (pinInfo) => {
 	    return {
@@ -52,6 +56,7 @@ app.service("PinService", function ($http, $q, FIREBASE_CONFIG) {
 	};
 
 
+
 	const getSinglePin = (pinId)=> {
 				return $http.get(`${FIREBASE_CONFIG.databaseURL}/pins/${pinId}.json`);
 		};
@@ -61,7 +66,7 @@ app.service("PinService", function ($http, $q, FIREBASE_CONFIG) {
 
 		};
 
-    return {getAllPins, createPinObject,  postNewPin, getSinglePin, saveSinglePin, getMuhPins};
+    return {getAllPins, createPinObject,  postNewPin, getSinglePin, saveSinglePin, deleteMyPin, getMuhPins};
 
 });
   

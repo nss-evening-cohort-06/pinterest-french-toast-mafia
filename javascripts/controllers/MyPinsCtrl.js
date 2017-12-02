@@ -11,5 +11,14 @@ app.controller("MyPinsCtrl", function($rootScope, $scope, PinService) {
     };
 
     getUserPins();
+
+    $scope.deletePin = (pinId) => {
+        PinService.deleteMyPin(pinId).then((results) => {
+            getUserPins();
+        }).catch((error) => {
+            console.log("Error in deleteMyPin", error);
+        });
+    };
+
     
 });
