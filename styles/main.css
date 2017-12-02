@@ -1,0 +1,23 @@
+.userBlock {
+  margin-bottom: 50px; }
+  .userBlock .name {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px; }
+    .userBlock .name h1 {
+      width: fit-content; }
+      .userBlock .name h1 :first-child {
+        font-size: 4em; }
+      .userBlock .name h1 :last-child {
+        font-size: 4.2em; }
+
+.search-box {
+  margin-bottom: 50px; }
+
+.search {
+  margin-top: 10px;
+  margin-bottom: 50px; }
+
+.search {
+  margin-top: 10px;
+  margin-bottom: 50px; }

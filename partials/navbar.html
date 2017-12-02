@@ -1,28 +1,48 @@
 <nav class="navbar navbar-default" ng-controller="NavCtrl">
-    <div class="container-fluid">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">Brand</a>
-      </div>
-  
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav" ng-show="uid">
-              <li><a href="#!/mypins">My Pins</a></li>
-              <li><a href="#!/myboards">My Boards</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#!/newpin">Add Pin</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#!/newboard">Add Board</a></li>
-              <li><a ng-click="logoutUser()">Logout</a></li>
-              
-        </ul>
-      </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-  </nav>
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+        aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Brand</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav" ng-show="uid">
+
+        <li role="separator" class="divider"></li>
+        <li>
+          <a href="#!/newpin">Add Pin</a>
+        </li>
+        <li role="separator" class="divider"></li>
+        <li>
+          <a href="#!/newboard">Add Board</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right" ng-show="uid">
+        <li>
+          <a href="#!/allboards">Home</a>
+        </li>
+        <li role="separator" class="divider"></li>
+        <li>
+          <a href="#!/allpins">Explore</a>
+        </li>
+        <li>
+          <a href="#!/myboards">You</a>
+        </li>
+        <li role="separator" class="divider"></li>
+        <li>
+          <a ng-click="logoutUser()">Logout</a>
+        </li>
+      </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div>
+  <!-- /.container-fluid -->
+</nav>

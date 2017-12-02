@@ -1,9 +1,30 @@
-<div class="input-group input-group-lg col-xs-6 col-xs-offset-3">
+<div class="col-sm-8 col-sm-offset-2 userBlock">
+  <div class="name">
+    <h1>{{user.name}}</h1>
+    <h1>
+      <i class="fa fa-user-circle" aria-hidden="true"></i>
+    </h1>
+  </div>
+  <div>
+    <button class="btn btn-default">Boards</button>
+    <button class="btn btn-default" ng-click="seeMyPins()">Pins</button>
+  </div>
+</div>
+
+<div class="input-group input-group-lg col-xs-6 col-xs-offset-3 search-box">
   <span class="input-group-addon glyphicon glyphicon-search" aria-hidden="true"></span>
   <input type="text" class="form-control" placeholder="Search boards by name" ng-model="searchText">
 </div>
 
 <div class="row">
+  <div class="col-sm-6 col-md-4 thumbnail text-center" ng-click="toAddBoard()">
+    <div class="caption">
+      <h3>
+        <i class="fa fa-plus-circle" aria-hidden="true"></i>
+      </h3>
+      <h3>Create board</h3>
+    </div>
+  </div>
   <div class="col-sm-6 col-md-4" ng-repeat="board in boards | filter: {name:searchText}">
     <div class="thumbnail">
       <div class="caption">
@@ -17,5 +38,3 @@
     </div>
   </div>
 </div>
-
-<button roll="button" class="btn btn-default" ng-click="toAddBoard()">New Board</button>

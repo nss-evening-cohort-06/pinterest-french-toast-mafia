@@ -1,5 +1,9 @@
 <div>
-  <div ng-repeat="pin in pins" class="col-sm-6 col-md-4">
+    <div class="input-group input-group-lg col-xs-6 col-xs-offset-3 search">
+        <span class="input-group-addon glyphicon glyphicon-search" aria-hidden="true"></span>
+        <input type="text" class="form-control" placeholder="Find a pin" ng-model="searchText">
+    </div>
+  <div ng-repeat="pin in pins | filter: searchText" class="col-sm-6 col-md-4">
     <div class="thumbnail">
       <img src="" alt="{{pin.img_path}}">
       <div class="caption">
@@ -8,8 +12,8 @@
         <p>
           <a target="_blank" href="{{pin.url}}" class="btn btn-primary" role="button">See Content</a>
 
-          <button class="btn btn-primary detail" role="button">
-            <i class="fa fa-heart fa-lg" aria-hidden="true" ng-click="savePin(pin.id)"></i>
+          <button class="btn btn-primary detail" role="button" ng-click="savePin(pin.id)">
+            <i class="fa fa-heart" aria-hidden="true"></i>
         </p>
       </div>
     </div>
