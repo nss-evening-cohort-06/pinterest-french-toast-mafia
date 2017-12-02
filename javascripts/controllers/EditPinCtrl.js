@@ -12,9 +12,10 @@ const getPin = () => {
         });
     };
 
-$scope.editPin = (userUid) => {
+$scope.editPin = (pin, userUid) => {
         let editedPin = $scope.pin;
         PinService.editPin(editedPin, $routeParams.id).then((results) => {
+            getPin();
             $location.path("/pins/myPins");
         }).catch((error) => {
             console.log("Error in editPins", error);
