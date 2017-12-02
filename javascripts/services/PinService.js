@@ -64,7 +64,19 @@ app.service("PinService", function ($http, $q, FIREBASE_CONFIG) {
 	};
 
 	const getPinsByBoard = (boardId) => {
-		return $http.get(`${FIREBASE_CONFIG.databaseURL}/pins/${boardId}.json`);
+		let myPins = [];
+		return $q((resolve, reject) => {
+			$http.get(`${FIREBASE_CONFIG.databaseURL}/pins.json?orderBy="boardId"&equalTo="${boardId}"`).then((results) => {
+				let pins = results.data;
+				Object.keys(pins).forEach((key) => {
+					pins[key].id = key;
+					myPins.push(pins[key]);
+				});
+				resolve(myPins);
+			}).catch((error) => {
+				reject(error);
+			});
+		});
 	};
 
 	return {
