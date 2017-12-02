@@ -11,7 +11,6 @@ app.controller("AllPinsCtrl", function ($location, $scope, PinService) {
     }; // end showallPins()
 
 	$scope.savePin = (pinId) => {
-        console.log("pinid", pinId);
 		$location.path(`/pin/${pinId}`);
 	};
 	

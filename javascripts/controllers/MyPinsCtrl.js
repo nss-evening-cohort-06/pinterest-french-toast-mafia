@@ -33,5 +33,9 @@ app.controller("MyPinsCtrl", function($location, $rootScope, $scope, DataService
         });
     };
 
+    $scope.toAddPin = () => {
+        $location.path('/newpin');
+    };
+
     getUserName();
 });
