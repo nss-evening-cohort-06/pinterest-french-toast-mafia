@@ -55,7 +55,16 @@ app.service("PinService", function ($http, $q, FIREBASE_CONFIG) {
 	    };
 	};
 
+const getPin = (pinId) => {
+    return $http.get(`${FIREBASE_CONFIG.databaseURL}/pins/${pinId}.json`);
+  };
 
+	const editPin = (editPin, pinId) => {
+		let pinObject = createPinObject(editPin);
+    return $http.put(`${FIREBASE_CONFIG.databaseURL}/pins/${pinId}.json`, JSON.stringify(editPin));
+};
+
+  
 
 	const getSinglePin = (pinId)=> {
 				return $http.get(`${FIREBASE_CONFIG.databaseURL}/pins/${pinId}.json`);
@@ -66,7 +75,6 @@ app.service("PinService", function ($http, $q, FIREBASE_CONFIG) {
 
 		};
 
-    return {getAllPins, createPinObject,  postNewPin, getSinglePin, saveSinglePin, deleteMyPin, getMuhPins};
-
+    return {getAllPins, createPinObject, postNewPin, getSinglePin, saveSinglePin, deleteMyPin, getMuhPins, editPin};
 });
   

@@ -85,6 +85,11 @@ app.config(function($routeProvider)  {
             controller: "SavePinCtrl",
             resolve: {isAuth}
         })
+        .when("/edit/:id", {
+            templateUrl: "partials/pins/pinDetail.html",
+            controller: "EditPinCtrl",
+            resolve: {isAuth}
+        })
         .when("/auth", {
             templateUrl: "partials/auth.html",
             controller: "AuthCtrl"
