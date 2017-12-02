@@ -53,11 +53,21 @@ app.service("PinService", function ($http, $q, FIREBASE_CONFIG) {
 			"boardId": pinInfo.boardId,
 			"uId": pinInfo.uId
 		};
-	};
+	};	
+const getPin = (pinId) => {
+    return $http.get(`${FIREBASE_CONFIG.databaseURL}/pins/${pinId}.json`);
+  };
 
-	const getSinglePin = (pinId) => {
-		return $http.get(`${FIREBASE_CONFIG.databaseURL}/pins/${pinId}.json`);
-	};
+	const editPin = (editPin, pinId) => {
+		let pinObject = createPinObject(editPin);
+    return $http.put(`${FIREBASE_CONFIG.databaseURL}/pins/${pinId}.json`, JSON.stringify(editPin));
+};
+
+  
+
+	const getSinglePin = (pinId)=> {
+				return $http.get(`${FIREBASE_CONFIG.databaseURL}/pins/${pinId}.json`);
+		};
 
 	const saveSinglePin = (pin, pinId) => {
 		return $http.post(`${FIREBASE_CONFIG.databaseURL}/pins/.json`, JSON.stringify(pin));
@@ -78,7 +88,6 @@ app.service("PinService", function ($http, $q, FIREBASE_CONFIG) {
 			});
 		});
 	};
-
 	return {
 		getAllPins,
 		createPinObject,
@@ -87,7 +96,7 @@ app.service("PinService", function ($http, $q, FIREBASE_CONFIG) {
 		saveSinglePin,
 		deleteMyPin,
 		getMuhPins,
-		getPinsByBoard
+		getPinsByBoard,
+		
 	};
-
 });
