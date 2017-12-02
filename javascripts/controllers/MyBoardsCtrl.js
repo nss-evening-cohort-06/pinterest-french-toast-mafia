@@ -34,6 +34,10 @@ app.controller("MyBoardsCtrl", function ($location, $rootScope, $scope, DataServ
         $location.path(`/mypins`);
     };
 
+    $scope.seeThisBoardsPins = (boardId) => {
+        $location.path(`/pinsbyboard/${boardId}`);
+    };
+
     const getUserName = () => {
         DataService.getUserInfo($rootScope.uid).then((results) => {
             $scope.user = results[0];

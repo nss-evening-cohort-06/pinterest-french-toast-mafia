@@ -27,9 +27,12 @@ app.service("DataService", function ($http, $q, FIREBASE_CONFIG) {
         if (fbBoards != null) {
           Object.keys(fbBoards).forEach((key) => {
             fbBoards[key].id = key;
-            if (!fbBoards[key].is_secret) {
-              boards.push(fbBoards[key]);
+            if (fbBoards[key].is_secret === 'true') {
+              fbBoards[key].is_secret = true;
+            } else {
+              fbBoards[key].is_secret = false;
             }
+            boards.push(fbBoards[key]);
             resolve(boards);
           });
         }

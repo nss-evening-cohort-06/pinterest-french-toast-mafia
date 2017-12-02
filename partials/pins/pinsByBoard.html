@@ -1,8 +1,4 @@
 <div>
-    <div class="input-group input-group-lg col-xs-6 col-xs-offset-3 search">
-        <span class="input-group-addon glyphicon glyphicon-search" aria-hidden="true"></span>
-        <input type="text" class="form-control" placeholder="Find a pin" ng-model="searchText">
-    </div>
   <div ng-repeat="pin in pins | filter: searchText" class="col-sm-6 col-md-4">
     <div class="thumbnail">
       <img src="{{pin.img_path}}" alt="{{pin.img_path}}">
