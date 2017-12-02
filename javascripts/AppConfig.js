@@ -46,7 +46,7 @@ app.config(function($routeProvider)  {
 
     $routeProvider
         .when("/mypins", {
-            templateUrl: "partials/pins/myPins.html",
+            templateUrl: "partials/profile/myPins.html",
             controller: "MyPinsCtrl",
             resolve: {isAuth}
         })
@@ -61,7 +61,7 @@ app.config(function($routeProvider)  {
             resolve: {isAuth}
         })
         .when("/myboards", {
-            templateUrl: "partials/boards/myBoards.html",
+            templateUrl: "partials/profile/myBoards.html",
             controller: "MyBoardsCtrl",
             resolve: {isAuth}
         })
