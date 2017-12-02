@@ -26,14 +26,17 @@
     </div>
   </div>
   <div class="col-sm-6 col-md-4" ng-repeat="board in boards | filter: {name:searchText}">
-    <div class="thumbnail">
+    <div class="thumbnail boardThumb">
+      <button class="youBoardButton btn btn-danger delete" ng-click="deleteMyBoard(board.id)">
+        <i class="fa fa-trash-o"></i>
+      </button>
       <div class="caption">
-        <h3>{{board.name}}</h3>
+        <h3 class="boardName boardCenter">{{board.name}}</h3>
         <p>{{board.description}}</p>
-        <p ng-show="board.is_secret">This is a secret board</p>
-        <p ng-show="!board.is_secret">This is not a secret board</p>
-        <button class="btn btn-default" ng-click="editMyBoard(board.id)">Edit Board</button>
-        <button class="btn btn-default" ng-click="deleteMyBoard(board.id)">Delete Board</button>
+        <p  ng-show="board.is_secret">This is a secret board</p>
+        <p class="boardSecret" ng-show="!board.is_secret">This is not a secret board</p>
+        <button class="youBoardButton btn btn-primary primaryButton" ng-click="editMyBoard(board.id)">Edit Board</button>
+      
       </div>
     </div>
   </div>

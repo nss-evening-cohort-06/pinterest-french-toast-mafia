@@ -14,10 +14,61 @@
 .search-box {
   margin-bottom: 50px; }
 
-.search {
-  margin-top: 10px;
-  margin-bottom: 50px; }
+.boardName {
+  font-weight: bolder;
+  font-size: 24px;
+  margin-top: 10px; }
+
+.boardSecret {
+  font-style: italic;
+  font-size: 10px; }
+
+.delete {
+  margin-bottom: 5px; }
+
+.boardCenter {
+  margin-top: 40px; }
+
+.boardThumb {
+  height: 300px; }
 
 .search {
   margin-top: 10px;
   margin-bottom: 50px; }
+
+.eachBoardandPin {
+  overflow-wrap: break-word; }
+
+.primaryButton {
+  margin-bottom: 0; }
+
+.search {
+  margin-top: 10px;
+  margin-bottom: 50px; }
+
+.btn-primary {
+  margin-top: 10px;
+  margin-bottom: 0px; }
+
+.thumbnail {
+  overflow-wrap: break-word;
+  position: relative;
+  webkit-box-shadow: 10px 8px 26px -10px rgba(0, 0, 0, 0.56);
+  -moz-box-shadow: 10px 8px 26px -10px rgba(0, 0, 0, 0.56);
+  box-shadow: 10px 8px 26px -10px rgba(0, 0, 0, 0.56); }
+  .thumbnail .delete {
+    position: absolute;
+    right: 15px;
+    top: 15px; }
+
+img {
+  max-height: 165px;
+  margin-top: 7px; }
+
+.eachBoardandPin {
+  height: 350px; }
+
+.thumbnail:hover {
+  -webkit-box-shadow: 0px 1px 37px 0px rgba(0, 0, 0, 0.35);
+  -moz-box-shadow: 0px 1px 37px 0px rgba(0, 0, 0, 0.35);
+  box-shadow: 0px 1px 37px 0px rgba(0, 0, 0, 0.35); }
