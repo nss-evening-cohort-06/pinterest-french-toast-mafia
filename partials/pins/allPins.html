@@ -7,6 +7,9 @@
         <p>{{pin.details}}</p>
         <p>
           <a target="_blank" href="{{pin.url}}" class="btn btn-primary" role="button">See Content</a>
+
+          <button class="btn btn-primary detail" role="button">
+            <i class="fa fa-heart fa-lg" aria-hidden="true" ng-click="savePin(pin.id)"></i>
         </p>
       </div>
     </div>
