@@ -97,6 +97,6 @@ const getPin = (pinId) => {
 		deleteMyPin,
 		getMuhPins,
 		getPinsByBoard,
-		
+		editPin
 	};
 });
